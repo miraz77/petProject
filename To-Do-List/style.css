@@ -2,22 +2,67 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 50px;
+    background-color: #f7f7f7; /* Light gray background */
+}
+
+h1 {
+    color: #333; /* Dark gray color for the heading */
+    margin-bottom: 20px; /* Space between heading and the input field */
 }
 
 #new-task {
     padding: 10px;
     width: 300px;
+    border-radius: 5px; /* Rounded corners */
 }
 
 button {
     padding: 10px 15px;
     margin-left: 10px;
     cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
 }
 
-#task-list button {
-    margin-left: 10px;
-    background-color: #f44336; /* Red color */
-    color: white;
+#task-list {
+    margin-top: 20px; /* Space between the input/button and the task list */
+}
+
+#task-list li {
+    background-color: #fff; /* White background for tasks */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px;
+    margin: 10px 0; /* Spacing between tasks */
+    display: flex; /* Layout child elements in a line */
+    align-items: center; /* Align the checkbox, text, and button vertically */
+}
+
+#task-list input[type="checkbox"] {
+    margin-right: 10px; /* Space between the checkbox and the task text */
+}
+
+button:hover {
+    background-color: #eee; /* Light gray background on hover */
+}
+
+#task-list li:hover {
+    background-color: #f3f3f3; /* Slightly darker than the regular background */
+}
+
+#task-list button:hover {
+    background-color: #d32f2f; /* Slightly darker red on hover */
+}
+#task-list li {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s; /* Duration of the transition */
+    animation: fadeInUp 0.3s forwards; /* Animation name, duration, and behavior */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
